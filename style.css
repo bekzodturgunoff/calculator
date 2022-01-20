@@ -29,12 +29,12 @@
   border-radius: 5px;
   background-color: #EEEEEE;
 }
-#currentScreen{
+#current-screen{
 font-size: 40px;
 width: 312px;
 height: 64px;
 }
-#lastScreen{
+#last-screen{
 font-size: 20px;
 width: 312px;
 height: 32px;
@@ -86,7 +86,7 @@ height: 32px;
 .numbers{
   padding: 20px;
   border: 2px solid black;
-  border-radius: 5px;s
+  border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
   transition: 0.2s ease;
@@ -101,6 +101,7 @@ footer{
   display: flex;
   justify-content: center;
   padding: 20px;
+  margin-top: 10px;
 }
 p{
   margin-right: 10px;
