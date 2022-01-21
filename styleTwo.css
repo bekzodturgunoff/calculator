@@ -13,9 +13,6 @@
   font-size: 20px;
 }
 
-body{
-  background-color: #FCB31B;
-}
 .container{
   display: block;
   position: fixed;
@@ -23,39 +20,35 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  width: 350px;
+  width: 400px;
   height: 600px;
-  border-radius: 10px;
-  background-color: #202021;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #AAAAAA;
   text-align: right;
-
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .display-calculator{
-  width: 310px;
+  border: 2px solid black;
+  width: 356px;
   height: 120px;
   padding: 10px 20px;
-  border-radius: 10px;
-  background-color: #3B3A3A;
-  box-shadow: inset 2px 3px 5px 0px rgb(0 0 0 )
-  
+  border-radius: 5px;
+  background-color: #EEEEEE;
 }
 #current-screen{
 font-size: 40px;
-width: 280px;
+width: 312px;
 height: 64px;
 font-family:"custom font", sans-serif ;
-word-wrap: break-word;
-word-break: break-all;
-color: #FFF;
-margin-top: 12px;
 }
 #last-screen{
 font-size: 20px;
-width: 280px;
+width: 312px;
 height: 32px;
 font-family: 'custom font', sans-serif;
-color: #FFF;
 }
 
 .btns-calculator{
@@ -68,7 +61,7 @@ color: #FFF;
 .btn-clear{
   padding: 20px;
   border-radius: 5px;
-border: none;
+  border: 2px solid black;
   font-size: 20px;
   background-color: #DF5200;
   cursor: pointer;
@@ -79,15 +72,13 @@ border: none;
 }
 .btn-clear:hover{
   background-color: #df520000;
-  color: red;
 }
 .btn-clear:active{
   background-color:  #DF5200;
-  color: #000;
 }
 .btn-delete{
   border-radius: 5px;
-  border:none;
+  border: 2px solid black;
   font-size: 20px;
   background-color: #DF5200;
   cursor: pointer;
@@ -95,11 +86,9 @@ border: none;
 }
 .btn-delete:hover{
   background-color: #d6804f00;
-  color: #FFF;
 }
 .btn-delete:active{
   background-color: #DF5200;
-  color: #000;
 }
 .calculator-numbers{
   display: grid;
@@ -109,9 +98,8 @@ border: none;
 }
 .numbers{
   padding: 20px;
-background-color: #616060;
-border: none;
-  border-radius: 100%;
+  border: 2px solid black;
+  border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
   transition: 0.2s ease;
@@ -137,5 +125,5 @@ a{
   transition: 0.2s ease;
 }
 a:hover{
-  color: #FFF;
+  color: blue;
 }
