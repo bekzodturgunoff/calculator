@@ -42,7 +42,7 @@ class Calculator {
         computation = last + current
         break
       case "-":
-        computation = last + current
+        computation = last - current
         break
       case "÷":
         computation = last / current
