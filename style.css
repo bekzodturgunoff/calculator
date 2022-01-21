@@ -53,29 +53,32 @@ height: 32px;
   border-radius: 5px;
   border: 2px solid black;
   font-size: 20px;
-  background-color: rgb(245, 91, 91);
+  background-color: #DF5200;
   cursor: pointer;
   transition: 0.2s ease;
 }
+[data-operator]{
+  background-color: #3E3F3E;
+}
 .btn-clear:hover{
-  background-color: rgb(250, 115, 115) ;
+  background-color: #df520000;
 }
 .btn-clear:active{
-  background-color: rgb(252, 136, 136) ;
+  background-color:  #DF5200;
 }
 .btn-delete{
   border-radius: 5px;
   border: 2px solid black;
   font-size: 20px;
-  background-color: rgb(121, 121, 241);
+  background-color: #DF5200;
   cursor: pointer;
   transition: 0.2s ease;
 }
 .btn-delete:hover{
-  background-color: rgb(140, 140, 240);
+  background-color: #d6804f00;
 }
 .btn-delete:active{
-  background-color: rgb(157, 157, 243);
+  background-color: #DF5200;
 }
 .calculator-numbers{
   display: grid;
