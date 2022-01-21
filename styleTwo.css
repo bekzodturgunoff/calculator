@@ -10,8 +10,8 @@
 .style a{
   display: flex;
   justify-content: center;
-  font-size: 25px;
-  margin-top: 30px;
+  font-size: 20px;
+  margin-top: 5px;
 }
 
 .container{
