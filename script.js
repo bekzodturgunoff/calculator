@@ -11,7 +11,7 @@ class Calculator {
   }
 
   delete() {
-
+    currentDisplay.innerText = currentDisplay.innerHTML.toString().slice(0, -1)
   }
 
   appendNumber(number) {
@@ -21,8 +21,8 @@ class Calculator {
   }
 
   chooseOperation(operation) {
-    if (this.currentDisplay.innerText === "") return
-    if (this.lastDisplay.innerText !== "") {
+    if (this.currentDisplay === "") return
+    if (this.lastDisplay !== "") {
       this.compute()
     }
     this.operation = operation
@@ -61,8 +61,6 @@ class Calculator {
   upDateDisplay() {
     currentDisplay = this.currentDisplay
     lastDisplay = currentDisplay.textContent
-
-
   }
 
 }
@@ -86,7 +84,7 @@ numbers.forEach(button => {
 })
 
 operator.forEach(operation => {
-  operation.addEventListener("click", (e) => {
+  operation.addEventListener("click", () => {
     calculator.chooseOperation(operation.innerText)
     calculator.upDateDisplay()
   })
@@ -94,12 +92,17 @@ operator.forEach(operation => {
 
 clearBtn.addEventListener("click", () => {
   calculator.clear()
+  calculator.upDateDisplay()
 })
 
-equal.addEventListener("click", (button) => {
+equal.addEventListener("click", () => {
   calculator.compute()
   calculator.upDateDisplay()
   console.log("WTF is going on here? :)")
 })
 
 
+deleteBtn.addEventListener("click", () => {
+  calculator.delete()
+  calculator.upDateDisplay()
+})
