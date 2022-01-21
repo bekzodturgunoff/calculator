@@ -3,6 +3,10 @@
   padding: 0px;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "custom font";
+  src: url("font.ttf");
+}
 
 .container{
   display: block;
@@ -33,12 +37,13 @@
 font-size: 40px;
 width: 312px;
 height: 64px;
+font-family:"custom font", sans-serif ;
 }
 #last-screen{
 font-size: 20px;
 width: 312px;
 height: 32px;
-
+font-family: 'custom font', sans-serif;
 }
 
 .btns-calculator{
