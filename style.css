@@ -7,7 +7,9 @@
   font-family: "custom font";
   src: url("font.ttf");
 }
-
+body{
+  background-color: #FCB31B;
+}
 .container{
   display: block;
   position: fixed;
@@ -15,35 +17,39 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  width: 400px;
+  width: 350px;
   height: 600px;
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: #AAAAAA;
+  border-radius: 10px;
+  background-color: #202021;
   text-align: right;
-  word-wrap: break-word;
-  word-break: break-all;
+
 }
 
 .display-calculator{
-  border: 2px solid black;
-  width: 356px;
+  width: 310px;
   height: 120px;
   padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #EEEEEE;
+  border-radius: 10px;
+  background-color: #3B3A3A;
+  box-shadow: inset 2px 3px 5px 0px rgb(0 0 0 )
+  
 }
 #current-screen{
 font-size: 40px;
-width: 312px;
+width: 280px;
 height: 64px;
 font-family:"custom font", sans-serif ;
+word-wrap: break-word;
+word-break: break-all;
+color: #FFF;
+margin-top: 12px;
 }
 #last-screen{
 font-size: 20px;
-width: 312px;
+width: 280px;
 height: 32px;
 font-family: 'custom font', sans-serif;
+color: #FFF;
 }
 
 .btns-calculator{
@@ -56,7 +62,7 @@ font-family: 'custom font', sans-serif;
 .btn-clear{
   padding: 20px;
   border-radius: 5px;
-  border: 2px solid black;
+border: none;
   font-size: 20px;
   background-color: #DF5200;
   cursor: pointer;
@@ -67,13 +73,15 @@ font-family: 'custom font', sans-serif;
 }
 .btn-clear:hover{
   background-color: #df520000;
+  color: red;
 }
 .btn-clear:active{
   background-color:  #DF5200;
+  color: #000;
 }
 .btn-delete{
   border-radius: 5px;
-  border: 2px solid black;
+  border:none;
   font-size: 20px;
   background-color: #DF5200;
   cursor: pointer;
@@ -81,9 +89,11 @@ font-family: 'custom font', sans-serif;
 }
 .btn-delete:hover{
   background-color: #d6804f00;
+  color: #FFF;
 }
 .btn-delete:active{
   background-color: #DF5200;
+  color: #000;
 }
 .calculator-numbers{
   display: grid;
@@ -93,8 +103,9 @@ font-family: 'custom font', sans-serif;
 }
 .numbers{
   padding: 20px;
-  border: 2px solid black;
-  border-radius: 5px;
+background-color: #616060;
+border: none;
+  border-radius: 100%;
   font-size: 20px;
   cursor: pointer;
   transition: 0.2s ease;
