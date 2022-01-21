@@ -5,7 +5,7 @@ class Calculator {
     this.clear()
   }
   clear() {
-    this.lastDisplay.innerText = ""
+    lastDisplay.innerText = ""
     this.currentDisplay.innerText = ""
     this.operator = undefined
   }
@@ -20,21 +20,47 @@ class Calculator {
 
   }
 
-
   chooseOperation(operation) {
+    if (currentDisplay.innerText === "") return
+    if (lastDisplay.innerText !== "") {
+      this.compute()
+    }
     this.operation = operation
-    this.lastDisplay = this.currentDisplay
+    lastDisplay.innerText = currentDisplay.innerText
     this.currentDisplay.innerText = ""
 
 
   }
 
   compute() {
-
+    let computation
+    const last = parseFloat(lastDisplay.innerText)
+    const current = parseFloat(currentDisplay.innerText)
+    if (isNaN(last) || isNaN(current)) return
+    switch (this.operation) {
+      case "+":
+        computation = last + current
+        break
+      case "-":
+        computation = last + current
+        break
+      case "÷":
+        computation = last / current
+        break
+      case "×":
+        computation = last * current
+        break
+      default:
+        return
+    }
+    currentDisplay.innerText = computation
+    operation = undefined
+    lastDisplay.innerText = ""
   }
 
   upDateDisplay() {
     this.currentDisplay = this.currentDisplay
+    this.lastDisplay = currentDisplay.innerText
 
 
   }
@@ -59,7 +85,6 @@ numbers.forEach(button => {
   })
 })
 
-
 operator.forEach(operation => {
   operation.addEventListener("click", () => {
     calculator.chooseOperation(operation.innerText)
@@ -70,6 +95,13 @@ operator.forEach(operation => {
 clearBtn.addEventListener("click", () => {
   calculator.clear()
 })
+
+equal.addEventListener("click", (button) => {
+  calculator.compute()
+  calculator.upDateDisplay()
+  console.log("WTF is goingo on here? :)")
+})
+
 
 // equal.addEventListener("click", () => {
 //   if (currentDisplay.innerText.includes("+")) return
@@ -95,3 +127,13 @@ function divide(numberOne, numberTwo) {
   return numberOne % numberTwo
 }
 
+// window.addEventListener("keydown", (e) => {
+//   const dataKey = document.querySelector(`[data-key"${e.keycode}"]`)
+//   numbers.forEach(number => {
+//     number.addEventListener("keydown", () => {
+//       calculator.appendNumber(number.innerText)
+
+//     })
+
+//   })
+//   console.log(dataKey)
