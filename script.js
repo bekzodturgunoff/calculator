@@ -16,6 +16,8 @@ class Calculator {
   }
 
   appendNumber(number) {
+    if (currentDisplay.textContent.length > 14) return;
+    if (currentDisplay.textContent === "0") return;
     if (number === "." && currentDisplay.innerText.includes(".")) return;
     currentDisplay.innerText = currentDisplay.innerText + number;
   }
@@ -107,6 +109,7 @@ window.addEventListener("keydown", function (e) {
     }
     default:
       if (key >= 48 && key <= 57) calculator.appendNumber(String.fromCharCode(key));
+
   }
 
 });
