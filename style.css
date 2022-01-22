@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -7,17 +7,17 @@
   font-family: "custom font";
   src: url("font.ttf");
 }
-.style a{
+.style a {
   display: flex;
   justify-content: center;
   font-size: 20px;
   margin-top: 5px;
 }
 
-body{
-  background-color: #FCB31B;
+body {
+  background-color: #fcb31b;
 }
-.container{
+.container {
   display: block;
   position: fixed;
   top: 50%;
@@ -29,114 +29,112 @@ body{
   border-radius: 10px;
   background-color: #202021;
   text-align: right;
-
 }
 
-.display-calculator{
+.display-calculator {
   width: 310px;
   height: 120px;
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: #3B3A3A;
-  box-shadow: inset 2px 3px 5px 0px rgb(0 0 0 )
-  
+  background-color: #3b3a3a;
+  box-shadow: inset 2px 3px 5px 0px rgb(0 0 0);
 }
-#current-screen{
-font-size: 40px;
-width: 280px;
-height: 64px;
-font-family:"custom font", sans-serif ;
-word-wrap: break-word;
-word-break: break-all;
-color: #FFF;
-margin-top: 12px;
+#current-screen {
+  font-size: 40px;
+  width: 280px;
+  height: 64px;
+  font-family: "custom font", sans-serif;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #fff;
+  margin-top: 12px;
 }
-#last-screen{
-font-size: 20px;
-width: 280px;
-height: 32px;
-font-family: 'custom font', sans-serif;
-color: #FFF;
+#last-screen {
+  font-size: 20px;
+  width: 280px;
+  height: 32px;
+  font-family: "custom font", sans-serif;
+  color: #fff;
 }
 
-.btns-calculator{
+.btns-calculator {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 30px;
   gap: 10px;
   margin-bottom: 10px;
 }
-.btn-clear{
+.btn-clear {
   padding: 20px;
   border-radius: 5px;
-border: none;
+  border: none;
   font-size: 20px;
-  background-color: #DF5200;
+  background-color: #df5200;
   cursor: pointer;
   transition: 0.2s ease;
 }
-[data-operator]{
-  background-color: #3E3F3E;
+[data-operator] {
+  background-color: #3e3f3e;
 }
-.btn-clear:hover{
+.btn-clear:hover {
   background-color: #df520000;
   color: red;
 }
-.btn-clear:active{
-  background-color:  #DF5200;
+.btn-clear:active {
+  background-color: #df5200;
   color: #000;
 }
-.btn-delete{
+.btn-delete {
   border-radius: 5px;
-  border:none;
+  border: none;
   font-size: 20px;
-  background-color: #DF5200;
+  background-color: #df5200;
   cursor: pointer;
   transition: 0.2s ease;
 }
-.btn-delete:hover{
+.btn-delete:hover {
   background-color: #d6804f00;
-  color: #FFF;
+  color: #fff;
 }
-.btn-delete:active{
-  background-color: #DF5200;
+.btn-delete:active {
+  background-color: #df5200;
   color: #000;
 }
-.calculator-numbers{
+.calculator-numbers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
-
 }
-.numbers{
+.numbers {
   padding: 20px;
-background-color: #616060;
-border: none;
+  background-color: #616060;
+  border: none;
   border-radius: 100%;
   font-size: 20px;
   cursor: pointer;
   transition: 0.2s ease;
 }
-.numbers:hover{
+.numbers:hover {
   background-color: rgb(207, 204, 204);
 }
-.numbers:active{
+.numbers:active {
   background-color: rgb(185, 182, 182);
 }
-footer{
+footer {
   display: flex;
   justify-content: center;
   padding: 20px;
   margin-top: 10px;
 }
-p{
+p {
   margin-right: 10px;
+  color: #fff;
 }
-a{
+a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   transition: 0.2s ease;
 }
-a:hover{
-  color: #FFF;
+a:hover {
+  color: blue;
 }

@@ -4,6 +4,7 @@ class Calculator {
     this.currentDisplay = currentDisplay;
     this.clear();
   }
+
   clear() {
     this.lastDisplay.innerText = "";
     this.currentDisplay.innerText = "";
@@ -61,8 +62,8 @@ const clearBtn = document.querySelector(".btn-clear");
 const deleteBtn = document.querySelector(".btn-delete");
 let operator = document.querySelectorAll("[data-operator]");
 const numbers = document.querySelectorAll("[data-number]");
-let currentDisplay = document.querySelector("[data-current-screen]");
-let lastDisplay = document.querySelector("[data-last-screen]");
+let currentDisplay = document.querySelector("#current-screen");
+let lastDisplay = document.querySelector("#last-screen");
 const equal = document.querySelector("#equal-btn");
 const dot = document.querySelector("#dot-btn");
 const calculator = new Calculator(lastDisplay, currentDisplay);
@@ -89,4 +90,9 @@ equal.addEventListener("click", () => {
 
 deleteBtn.addEventListener("click", () => {
   calculator.delete();
+});
+
+
+window.addEventListener("click", () => {
+
 });
