@@ -87,10 +87,11 @@ window.addEventListener("keydown", function (e) {
       calculator.delete();
       break;
     }
-    case 67: {
+    case 67, 27: {
       calculator.clear();
       break;
     }
+
     case 107: {
       calculator.chooseOperation();
       break;
