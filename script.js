@@ -73,12 +73,50 @@ numbers.forEach((button) => {
     calculator.appendNumber(button.innerText);
   });
 });
+window.addEventListener("keydown", function (e) {
+  const key = e.keyCode;
+  switch (key) {
+    case 13: {
+      calculator.compute();
+      console.log("enter");
+      break;
+    }
+    case 8: {
+      calculator.delete();
+      break;
+    }
+    case 67: {
+      calculator.clear();
+      break;
+    }
+    case 107: {
+      calculator.chooseOperation();
+      break;
+    }
+    case 109: {
+      calculator.chooseOperation();
+      break;
+    }
+    case 111: {
+      calculator.chooseOperation();
+      break;
+    }
+    case 106: {
+      calculator.chooseOperation();
+      break;
+    }
+    default:
+      if (key >= 48 && key <= 57) calculator.appendNumber(String.fromCharCode(key));
+  }
+
+});
 
 operator.forEach((operation) => {
   operation.addEventListener("click", () => {
     calculator.chooseOperation(operation.innerText);
   });
 });
+
 
 clearBtn.addEventListener("click", () => {
   calculator.clear();
@@ -93,6 +131,9 @@ deleteBtn.addEventListener("click", () => {
 });
 
 
-window.addEventListener("click", () => {
 
-});
+
+
+
+
+
